@@ -153,7 +153,7 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/07/%E3%80%8A%E5%8F%A4%E9%A3%8E%E4%BA%94%E5%8D%81%E4%B9%9D%E9%A6%96%E3%80%8B%EF%BC%88%E5%85%B6%E4%B8%89%E5%8D%81%E4%B8%89%EF%BC%89%E2%80%94%E2%80%94%E6%9D%8E%E7%99%BD/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/%E5%B0%8F%E7%8E%8B%E5%AD%90%E5%A4%B4%E5%83%8F.jpg">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/69187097?s=460&u=2311c507cfe47aba8ed463016c536251d1fe1d05&v=4">
       <meta itemprop="name" content="ty">
       <meta itemprop="description" content="这位博主很懒，什么也没留下~">
     </span>
@@ -177,7 +177,21 @@
               <time title="创建时间：2021-01-07 21:27:42 / 修改时间：21:41:55" itemprop="dateCreated datePublished" datetime="2021-01-07T21:27:42+08:00">2021-01-07</time>
             </span>
 
-          <br>
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/01/07/%E3%80%8A%E5%8F%A4%E9%A3%8E%E4%BA%94%E5%8D%81%E4%B9%9D%E9%A6%96%E3%80%8B%EF%BC%88%E5%85%B6%E4%B8%89%E5%8D%81%E4%B8%89%EF%BC%89%E2%80%94%E2%80%94%E6%9D%8E%E7%99%BD/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/01/07/%E3%80%8A%E5%8F%A4%E9%A3%8E%E4%BA%94%E5%8D%81%E4%B9%9D%E9%A6%96%E3%80%8B%EF%BC%88%E5%85%B6%E4%B8%89%E5%8D%81%E4%B8%89%EF%BC%89%E2%80%94%E2%80%94%E6%9D%8E%E7%99%BD/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -231,6 +245,7 @@
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -283,7 +298,7 @@
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="ty"
-      src="/%E5%B0%8F%E7%8E%8B%E5%AD%90%E5%A4%B4%E5%83%8F.jpg">
+      src="https://avatars.githubusercontent.com/u/69187097?s=460&u=2311c507cfe47aba8ed463016c536251d1fe1d05&v=4">
   <p class="site-author-name" itemprop="name">ty</p>
   <div class="site-description" itemprop="description">这位博主很懒，什么也没留下~</div>
 </div>
@@ -391,6 +406,35 @@
   
 
   
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : '7XPzqdUUfHVTDa03U5vm5bTY-gzGzoHsz',
+      appKey     : 'HiKgdPWYMP2ueH7LH7ym2tWF',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
 
 </body>
 </html>
